@@ -14,7 +14,7 @@ public class ShoppingCart {
     }
 
     public int calculateTotalPrice() {
-        return price;
+        return this.prices.stream().mapToInt(p -> p).sum();
     }
 
     public boolean hasDiscount() {
