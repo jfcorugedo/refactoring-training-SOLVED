@@ -22,4 +22,5 @@ public class ShoppingCart {
     public int numberOfProducts() {
         return this.prices.size();
     }
+    
 }
