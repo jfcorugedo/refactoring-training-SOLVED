@@ -13,12 +13,12 @@ public class ShoppingCart {
         this.newPrices.add(new Price(price));
     }
 
-    public Price calculateNewTotalPrice() {
+    public Price calculateTotalPrice() {
         return this.newPrices.stream().reduce(new Price(0), (memo, price) -> new Price(memo.getPrice() + price.getPrice()));
     }
 
     public boolean hasDiscount() {
-        return calculateNewTotalPrice().getPrice() >= 100;
+        return calculateTotalPrice().getPrice() >= 100;
     }
 
     public int numberOfProducts() {

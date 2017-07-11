@@ -10,6 +10,6 @@ public class ExternalCartClient {
         shoppingCart.add(price);
         return String.format(
                 "Total price is %d euro",
-                shoppingCart.calculateNewTotalPrice().getPrice());
+                shoppingCart.calculateTotalPrice().getPrice());
     }
 }
