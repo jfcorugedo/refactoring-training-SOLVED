@@ -16,6 +16,10 @@ public class ShoppingCart {
     public int calculateTotalPrice() {
         return this.prices.stream().mapToInt(p -> p).sum();
     }
+    
+    public Price calculateNewTotalPrice() {
+        return this.newPrices.stream().reduce(new Price(0), (memo, price) -> new Price(memo.getPrice() + price.getPrice()));
+    }
 
     public boolean hasDiscount() {
         return calculateTotalPrice() >= 100;
