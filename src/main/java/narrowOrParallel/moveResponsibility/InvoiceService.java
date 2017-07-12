@@ -3,9 +3,9 @@ package narrowOrParallel.moveResponsibility;
 import java.math.BigDecimal;
 
 public class InvoiceService {
-    public String calculateNetAmount(String amount, String tax){
+    public String calculateNetAmount(String amount, String tax, Invoice invoice2){
     	
-        Invoice invoice = new narrowOrParallel.moveResponsibility.Invoice();
+        Invoice invoice = invoice2;
         invoice.grossAmount = new BigDecimal(amount);
         invoice.taxPercentage = new BigDecimal(tax);
         return invoice.grossAmount.subtract(
