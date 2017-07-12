@@ -2,7 +2,11 @@ package narrowOrParallel.constructorFusion;
 
 public class Player {
 	
-    private String name;
+    public static Player createPlayer(Role role, String name, int score) {
+		return new Player(role, name, score);
+	}
+
+	private String name;
     private int score;
     private Role role;
 
@@ -12,7 +16,7 @@ public class Player {
         this.score = 0;
     }
 
-    public Player(Role role, String name, int score){
+    private Player(Role role, String name, int score){
         this.role = role;
         this.name = name;
         this.score = score;
