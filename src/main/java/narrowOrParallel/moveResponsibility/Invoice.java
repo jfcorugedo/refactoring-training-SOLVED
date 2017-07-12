@@ -6,7 +6,7 @@ public class Invoice {
     public BigDecimal grossAmount;
     public BigDecimal taxPercentage;
     public int numberOfItems;
-	public String calculateNetAmount(String amount, String tax, InvoiceService invoiceService){
+	public String calculateNetAmount(String amount, String tax){
 		
 	    Invoice invoice = this;
 	    invoice.grossAmount = new BigDecimal(amount);

@@ -10,7 +10,7 @@ public class InvoiceShould {
         InvoiceService invoiceService = new InvoiceService();
 
         String result = new narrowOrParallel.moveResponsibility.Invoice()
-                        .calculateNetAmount("100", "10", invoiceService);
+                        .calculateNetAmount("100", "10");
 
         assertThat(result).isEqualTo("90.0");
     }
