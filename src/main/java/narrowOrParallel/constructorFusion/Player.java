@@ -1,6 +1,7 @@
 package narrowOrParallel.constructorFusion;
 
 public class Player {
+	
     private String name;
     private int score;
     private Role role;
