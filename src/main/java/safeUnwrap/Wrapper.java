@@ -1,10 +1,11 @@
 package safeUnwrap;
 
-public class Wrapper {
+public class Wrapper extends Model{
 	
     private Model Wrapped;
 
     public Wrapper(Model wrapped) {
+    	super(wrapped.getColor(), wrapped.getAmount());
         Wrapped = wrapped;
     }
 
