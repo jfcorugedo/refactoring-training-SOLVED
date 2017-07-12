@@ -2,7 +2,7 @@ package safeUnwrap;
 
 public class Wrapper extends Model{
 	
-    public static Wrapper createWrapper(Model wrapped) {
+    public static Model createWrapper(Model wrapped) {
 		return new Wrapper(wrapped);
 	}
 
