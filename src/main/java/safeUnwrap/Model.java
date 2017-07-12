@@ -16,8 +16,4 @@ public class Model {
     public int getAmount() {
         return Amount;
     }
-
-	public Model getWrapped() {
-	    return this;
-	}
 }

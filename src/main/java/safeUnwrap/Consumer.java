@@ -5,6 +5,6 @@ public class Consumer {
     public String getColor(Model model){
         Model wrapper = model;
 
-        return wrapper.getWrapped().getWrapped().getColor();
+        return wrapper.getColor();
     }
 }
