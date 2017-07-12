@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Finder {
+	
     UserRepository repository;
 
     public Finder(UserRepository repository) {
