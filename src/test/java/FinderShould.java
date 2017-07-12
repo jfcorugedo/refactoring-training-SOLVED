@@ -1,4 +1,5 @@
 import narrowOrParallel.dependencyChange.Finder;
+import narrowOrParallel.dependencyChange.Parser;
 import narrowOrParallel.dependencyChange.SpecificFinder;
 import narrowOrParallel.dependencyChange.UserRepository;
 import org.junit.Test;
@@ -10,7 +11,7 @@ public class FinderShould {
     @Test
     public void find_users_by_querying_profile() throws Exception {
         UserRepository repository = new UserRepository();
-        Finder finder = Finder.createFinder(repository);
+        Finder finder = new Finder(repository, new Parser());
 
         assertThat(finder.find("programmer").size())
                 .isEqualTo(1);
@@ -19,7 +20,7 @@ public class FinderShould {
     @Test
     public void get_users_with_empty_profile() throws Exception {
         UserRepository repository = new UserRepository();
-        Finder finder = Finder.createFinder(repository);
+        Finder finder = new Finder(repository, new Parser());
 
         assertThat(
                 finder.find("").size())

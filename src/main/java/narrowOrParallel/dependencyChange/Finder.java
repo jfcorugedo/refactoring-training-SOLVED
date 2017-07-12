@@ -5,11 +5,7 @@ import java.util.stream.Collectors;
 
 public class Finder {
 	
-    public static Finder createFinder(UserRepository repository) {
-		return new Finder(repository, new Parser());
-	}
-
-	UserRepository repository;
+    UserRepository repository;
 	
 	Parser parser;
 
