@@ -10,9 +10,16 @@ public class Finder {
 	}
 
 	UserRepository repository;
+	
+	Parser parser;
 
     protected Finder(UserRepository repository) {
         this.repository = repository;
+    }
+    
+    public Finder(UserRepository repository, Parser parser) {
+    	this.repository = repository;
+    	this.parser = parser;
     }
 
     public List<User> find(String query){
