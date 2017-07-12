@@ -1,6 +1,7 @@
 package safeUnwrap;
 
 public class Wrapper {
+	
     private Model Wrapped;
 
     public Wrapper(Model wrapped) {
