@@ -9,8 +9,8 @@ public class InvoiceShould {
     public void calculate_net_amount() throws Exception {
         InvoiceService invoiceService = new InvoiceService();
 
-        String result = invoiceService
-                        .calculateNetAmount("100", "10", new narrowOrParallel.moveResponsibility.Invoice());
+        String result = new narrowOrParallel.moveResponsibility.Invoice()
+                        .calculateNetAmount("100", "10", invoiceService);
 
         assertThat(result).isEqualTo("90.0");
     }
