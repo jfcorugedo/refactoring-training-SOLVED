@@ -10,7 +10,7 @@ public class FinderShould {
     @Test
     public void find_users_by_querying_profile() throws Exception {
         UserRepository repository = new UserRepository();
-        Finder finder = new Finder(repository);
+        Finder finder = Finder.createFinder(repository);
 
         assertThat(finder.find("programmer").size())
                 .isEqualTo(1);
@@ -19,7 +19,7 @@ public class FinderShould {
     @Test
     public void get_users_with_empty_profile() throws Exception {
         UserRepository repository = new UserRepository();
-        Finder finder = new Finder(repository);
+        Finder finder = Finder.createFinder(repository);
 
         assertThat(
                 finder.find("").size())
