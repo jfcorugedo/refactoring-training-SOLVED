@@ -2,9 +2,13 @@ package safeUnwrap;
 
 public class Wrapper extends Model{
 	
-    Model Wrapped;
+    public static Wrapper createWrapper(Model wrapped) {
+		return new Wrapper(wrapped);
+	}
 
-    public Wrapper(Model wrapped) {
+	Model Wrapped;
+
+    private Wrapper(Model wrapped) {
     	super(wrapped.getColor(), wrapped.getAmount());
         Wrapped = wrapped;
     }
