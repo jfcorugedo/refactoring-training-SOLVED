@@ -8,4 +8,8 @@ public class SqlVehicleMatcher implements VehicleMatcher {
                 query.brandDescription.split(" ")[1]
         )).size();
     }
+
+    public int countVehicles(NewVehicleQuery query) {
+        return new VehicleRepository().find(query).size();
+    }
 }
