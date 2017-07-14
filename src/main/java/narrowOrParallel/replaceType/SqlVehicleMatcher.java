@@ -1,7 +1,6 @@
 package narrowOrParallel.replaceType;
 
-public class SqlVehicleMatcher implements VehicleMatcher {
-    @Override
+public class SqlVehicleMatcher {
     public int countVehicles(OldVehicleQuery query) {
         return countVehicles(new NewVehicleQuery(
                 query.brandDescription.split(" ")[0],
@@ -9,7 +8,6 @@ public class SqlVehicleMatcher implements VehicleMatcher {
         ));
     }
 
-    @Override
     public int countVehicles(NewVehicleQuery query) {
         return new VehicleRepository().find(query).size();
     }
